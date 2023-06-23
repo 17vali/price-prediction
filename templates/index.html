@@ -1,0 +1,25 @@
+<form action="{{ url_for('predict')}}" method="post">
+    <p>Name</p>
+    <input type="text" name="name" placeholder="Enter product name" required="required" /><br> 
+    <p>Item Condition</p>
+    <label><input type="radio" name="item_condition" value="1" required="required" />1</label>
+    <label><input type="radio" name="item_condition" value="2" required="required" />2</label>
+    <label><input type="radio" name="item_condition" value="3" required="required" />3</label>
+    <label><input type="radio" name="item_condition" value="4" required="required" />4</label>
+    <label><input type="radio" name="item_condition" value="5" required="required" />5</label><br>
+    <p>Brand Name</p>
+    <input type="text" name="brand_name" placeholder="Enter brand name" /><br>
+    <p>Shipping</p>
+    <label><input type="radio" name="shipping" value="0" required="required" />0</label>
+    <label><input type="radio" name="shipping" value="1" required="required" />1</label><br>
+    <p>Item Description</p>
+    <input type="text" name="item_description" placeholder="Enter item description" required="required" /><br>
+    <p>Cat 1</p>
+    <input type="text" name="cat_1" placeholder="Cat 1" /><br>
+    <p>Cat 2</p>
+    <input type="text" name="cat_2" placeholder="Cat 2" /><br>
+    <p>Cat 3</p>
+    <input type="text" name="cat_3" placeholder="Cat 3" /><br>
+    <button type="submit">Predict</button>
+</form>
+<p> {{ prediction }} </p>
